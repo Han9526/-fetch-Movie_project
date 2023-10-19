@@ -25,7 +25,7 @@ async function MoviesData() {
     const appendmovie = document.getElementById("movie-container");
     moviedata.forEach(element => {
         let addhtml = `
-            <div class="movie-card" data-id=${element.id} id=movie_card style="display:block">
+            <div class="movie-card" data-id=${element.id} style="display:block">
                 <img src="${url}${element.poster_path}" alt="" width="300px">
                 <p class="movie-title" id="${element.id}">${element.title}</p>
                 <p class="movie-vote_average">${element.vote_average}</p>
