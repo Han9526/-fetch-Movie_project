@@ -1,3 +1,4 @@
+// Options 
 function Authorization() {
     const options = {
         method: 'GET',
@@ -8,13 +9,14 @@ function Authorization() {
     };
     return options;
 }
-
+// Url
 async function MovieImgUrl() {
     const response = await fetch('https://api.themoviedb.org/3/configuration', Authorization());
     const jsonData = await response.json()
     return jsonData.images.base_url + jsonData.images.poster_sizes[3];
 }
 
+// Add-data
 async function MoviesData() {
     const response = await fetch('https://api.themoviedb.org/3/movie/popular', Authorization())
     const jsonData = await response.json()
@@ -35,6 +37,7 @@ async function MoviesData() {
 
 }
 
+//  Click-event
 function addlistener() {
     const movieCards = document.getElementsByClassName('movie-card');
     Array.from(movieCards).forEach(card => {
@@ -44,7 +47,9 @@ function addlistener() {
         });
     });
 }
-function SearchMovies() {
+
+// Search-function
+function Searchfunction() {
     Array.from(document.getElementsByClassName("movie-card")).forEach((a) => {
         let movieTitle = document.getElementById(`${a.dataset.id}`).innerHTML;
         let inputField = document.getElementById("input_field").value;
@@ -56,18 +61,19 @@ function SearchMovies() {
     })
     inputFocus();
 }
-
+// Btn-click
 function ClickBtn() {
     document.getElementById("search_btn").addEventListener('click', () => {
-        SearchMovies();
+        Searchfunction();
     });
 }
+// Enter-click
 function EnterBtn(event) {
     if (event.keyCode == 13) {
-        SearchMovies();
+        Searchfunction();
     }
 }
-
+// Input-Focus
 function inputFocus() {
     document.getElementById('input_field').focus();
 }
