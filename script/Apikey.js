@@ -38,9 +38,19 @@ async function MoviesData() {
 }
 
 //  Click-event
+// function addlistener() {
+//     const movieCards = document.getElementsByClassName('movie-card');
+//     Array.from(movieCards).forEach(card => {
+//         card.addEventListener('click', () => {
+//             const id = card.dataset.id;
+//             alert(id);
+//         });
+//     });
+// }
+
 function addlistener() {
     const movieCards = document.getElementsByClassName('movie-card');
-    Array.from(movieCards).forEach(card => {
+    Array.from(movieCards).map(card => {
         card.addEventListener('click', () => {
             const id = card.dataset.id;
             alert(id);
@@ -48,19 +58,34 @@ function addlistener() {
     });
 }
 
+
 // Search-function
-function Searchfunction() {
-    Array.from(document.getElementsByClassName("movie-card")).forEach((a) => {
-        let movieTitle = document.getElementById(`${a.dataset.id}`).innerHTML;
+// function Searchfunction() {
+//     Array.from(document.getElementsByClassName("movie-card")).forEach((a) => {
+//         let movieTitle = document.getElementById(`${a.dataset.id}`).innerHTML;
+//         let inputField = document.getElementById("input_field").value;
+//         if (movieTitle.toLowerCase().indexOf(inputField.toLowerCase()) !== -1) {
+//             a.style.display = "block"
+//         } else {
+//             a.style.display = "none"
+//         }
+//     })
+//     inputFocus();
+// }
+function Searchfunction(){
+    const a = document.getElementsByClassName("movie-card");
+    for(let i = 0;i<a.length;i++){
+        let movieTitle = document.getElementById(`${a[i].dataset.id}`).innerHTML;
         let inputField = document.getElementById("input_field").value;
         if (movieTitle.toLowerCase().indexOf(inputField.toLowerCase()) !== -1) {
-            a.style.display = "block"
+            a[i].style.display = "block"
         } else {
-            a.style.display = "none"
+            a[i].style.display = "none"
         }
-    })
+    }
     inputFocus();
-}
+   
+  }
 // Btn-click
 function ClickBtn() {
     document.getElementById("search_btn").addEventListener('click', () => {
@@ -87,3 +112,4 @@ async function Order() {
 }
 
 Order();
+
