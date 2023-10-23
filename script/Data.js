@@ -27,10 +27,10 @@ export  async function MoviesData() {
     moviedata.forEach(movie => {
         let addhtml = `
             <div class="movie-card" data-id=${movie.id} style="display:block">
-                <img src="${url}${movie.poster_path}" alt="" width="300px">
-                <p class="movie-title" id="${movie.id}">${movie.title}</p>
+                <img src="${url}${movie.poster_path}" alt="" width="300px" id="img-${movie.id}">
+                <p class="movie-title" id="title-${movie.id}">${movie.title}</p>
                 <p class="movie-vote_average">${movie.vote_average}</p>
-                <p class="movie-overview">${movie.overview}</p>
+                <p class="movie-overview" id ="overview-${movie.id}" style="display:none">  ${movie.overview}</p>
             </div>
         `;
         appendmovie.innerHTML += addhtml;
