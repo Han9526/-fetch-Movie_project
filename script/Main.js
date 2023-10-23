@@ -1,15 +1,10 @@
-import {MoviesData} from './Data.js';
-import {addlistener} from './Click-Event.js';
-import { ClickBtn,EnterBtn,inputFocus } from './Search.js';
+import { MoviesData } from './Data.js';
+import { addlistener } from './Modal.js';
+import { ClickBtn, EnterBtn, inputFocus } from './Search.js';
 
 
-async function Order() {
-    inputFocus();
-    await MoviesData();
-    addlistener();
-   
-}
-
-Order();
+inputFocus();
+await MoviesData();
+addlistener();
 ClickBtn();
 EnterBtn();
