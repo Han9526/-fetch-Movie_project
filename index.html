@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/MainPage.css">
-    <script src="/script/Apikey.js" defer></script>
+    <script src="script/Main.js" type="module"></script>
 </head>
 <body>
     <header>
         <div class="header">
             <div class="header-main">
                 <div class="header-contents">
-                    <a href="MainPage.html">Home</a>
+                    <a href="index.html">Home</a>
                 </div>
-                <div class="header-sidebar"><a href="MainPage.html">한승준</a></div>
+                <div class="header-sidebar"><a href="index.html">한승준</a></div>
             </div>
         </div>
     </header>
@@ -23,7 +23,7 @@
     <section class="logo">
         <span class="logo-text">MovIe</span>
         <form>
-            <input type="text" placeholder="검색하세요" class="search-input-box" id="input_field" value="" onkeypress="EnterBtn(event)">
+            <input type="text" placeholder="검색하세요" class="search-input-box" id="input_field" value="">
             <input type="text" style="display:none;">
             <button type="button" class="search-btn" id="search_btn">검색</button>
         </form>
