@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="css/MainPage.css">
-    <script src="script/Main.js" type="module"></script>
-=======
     <link rel="stylesheet" href="./css/MainPage.css">
-    <script src="./script/Apikey.js" defer></script>
->>>>>>> b986d6afbe4b2de832888feff33e213e7d333208
+    <link rel="stylesheet" href="./css/Modal.css">
+    <script src="./script/Main.js" type="module"></script>
+
 </head>
 <body>
     <header>
@@ -39,7 +36,24 @@
         </div>
     </section>
 
-   
+    
+    <section>
+        <div class="modal" id="modal" style="display: none;">
+            <div class="modal-content">
+                <div><img src="" alt="" id="modal-img" class="photo" width="350px"></div>
+                <div class="desc">
+                    <div class="desc-header">
+                        <h2 id="modal-title">Movie Title</h2>
+                        <button id="modal-close-btn" class="btn-close">&times;</button>
+                    </div>
+                    <div class="desc-content">
+                        <p class="movie-info" id="modal-overview">asdasdasdasczxczxczxczxczxczx</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay" style="display: none;"></div>
+    </section>
 </body>
 
 </html>

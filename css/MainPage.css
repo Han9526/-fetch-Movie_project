@@ -19,6 +19,9 @@
        font-weight: normal;
        font-style: normal;
    }
+   *{
+    font-family: 'GmarketSansMedium';
+   }
 
 
    h1,
@@ -94,7 +97,7 @@
    }
 
    .panel-contents {
-
+    
        flex-basis: 0;
        min-width: 0;
        flex-grow: 1;
@@ -116,7 +119,7 @@
        background-color: #000000ff;
        color: white;
        position: relative;
-       height: 80px;
+       height: 50px;
        z-index: 1;
 
    }
@@ -223,7 +226,7 @@
        width: 23%;
        margin: 10px 10px 10px 10px;
        box-sizing: border-box;
-       
+       cursor: pointer;
 
    }
 
