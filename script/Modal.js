@@ -50,14 +50,8 @@ export async function addlistener() {
 
     // Array.from(movieCards).map((card) => {
     //     card.addEventListener('click', function () {
-    //         // const id = this.dataset.id;
-    //         // alert(card);
-    //         // console.log(card);
-    //         const imgElement = card.querySelector('img'); // <img> 요소에 대한 참조
-    //         const pElement = card.querySelector('p'); // <p> 요소에 대한 참조
-
-    //         console.log(imgElement);
-    //         console.log(pElement);
+    //          const id = this.dataset.id;
+    //          alert(id);
     //     });
     // });
 }
